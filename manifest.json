@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Coordify",
+    "description": "Get Google Maps coords easily",
+    "version": "0.1",
+    "icons": {
+      "32": "images/icon_32.png",
+      "128": "images/icon_128.png"
+    },
+    "permissions": [
+      "storage",
+      "background",
+      "tabs",
+      "*://*/*"
+    ],
+    "browser_action": {
+      "default_icon": "images/icon_32.png",
+      "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "all_frames": true,
+        "js": ["js/app.js","js/popup.js"],
+        "css": ["css/styles.css"]
+      }
+    ],
+    "background": {
+     
+    }
+   }
